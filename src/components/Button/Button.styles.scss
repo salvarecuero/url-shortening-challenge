@@ -1,0 +1,23 @@
+.button {
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.rounded {
+  border-radius: 40px;
+}
+
+.light-btn {
+  background-color: hsl(180, 66%, 49%);
+}
+
+.dark-btn {
+  background-color: hsl(257, 27%, 26%);
+}
