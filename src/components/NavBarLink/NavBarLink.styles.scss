@@ -1,5 +1,7 @@
+@use "../../styles/colors";
+
 .NavBar-link {
-  color: hsl(0, 0%, 75%);
+  color: colors.$gray;
   font-weight: 700;
 
   &:hover {

@@ -1,6 +1,10 @@
+@use "../../styles/colors";
+@use "../../styles/sizes";
+
 nav {
   display: flex;
   justify-content: space-between;
+  padding: sizes.$container-padding;
 }
 
 .nav-items-container {
@@ -32,7 +36,7 @@ nav {
     margin-left: 0px;
     position: relative;
     padding: 30px;
-    background-color: hsl(257, 27%, 26%);
+    background-color: colors.$dark-violet;
     border-radius: 15px;
 
     &.show-burger-menu {

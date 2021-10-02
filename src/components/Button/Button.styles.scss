@@ -1,5 +1,8 @@
+@use "../../styles/colors";
+
 .button {
   color: white;
+  width: inherit;
   font-weight: 700;
   padding: 10px;
   border-radius: 5px;
@@ -15,9 +18,9 @@
 }
 
 .light-btn {
-  background-color: hsl(180, 66%, 49%);
+  background-color: colors.$cyan;
 }
 
 .dark-btn {
-  background-color: hsl(257, 27%, 26%);
+  background-color: colors.$dark-violet;
 }
