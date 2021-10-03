@@ -1,0 +1,62 @@
+@use "../../styles/colors";
+
+.statistics-card-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: white;
+
+  $list: 1 2 3;
+
+  @each $i in $list {
+    &:nth-child(#{$i}) {
+      top: 35px * $i;
+
+      @media screen and (max-width: 725px) {
+        top: 0px;
+      }
+    }
+  }
+
+  .statistics-card-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    bottom: 60px;
+    padding: 10px;
+    box-sizing: content-box;
+    border-radius: 50%;
+    background-color: colors.$dark-violet;
+  }
+
+  .statistics-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    bottom: 40px;
+
+    .statistics-card-title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .statistics-card-description {
+      color: colors.$grayish-violet;
+    }
+  }
+
+  @media screen and (max-width: 725px) {
+    justify-content: center;
+    align-items: center;
+
+    * {
+      text-align: center;
+    }
+  }
+}

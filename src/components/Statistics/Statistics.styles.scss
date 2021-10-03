@@ -1,0 +1,78 @@
+@use "../../styles/colors";
+@use "../../styles/sizes";
+
+#statistics-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10% 10% 10%;
+  background-color: colors.$grayish-blue;
+
+  #statistics-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+
+    #statistics-title {
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    #statistics-description {
+      color: colors.$grayish-violet;
+      font-weight: 400;
+    }
+
+    @media screen and (max-width: 725px) {
+      padding: sizes.$container-mobile-padding;
+
+      width: auto;
+    }
+  }
+
+  #statistics-cards-container {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      /* We want to draw a line, so no content needed */
+      content: "";
+
+      /* This sets the position and size of the pseudo-element */
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 10px;
+      background-color: colors.$cyan;
+
+      /* Draw behind child elements */
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 725px) {
+      gap: 20px;
+      flex-direction: column;
+
+      &::after {
+        /* We want to draw a line, so no content needed */
+        content: "";
+
+        /* This sets the position and size of the pseudo-element */
+        position: absolute;
+        top: 2%;
+        left: 49%;
+        width: 10px;
+        height: 90%;
+        background-color: colors.$cyan;
+
+        /* Draw behind child elements */
+        z-index: -1;
+      }
+    }
+  }
+}
