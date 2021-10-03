@@ -25,6 +25,7 @@ function ShortenerInput({ handleNewLink }) {
           value={inputValue}
           onChange={onChange}
           placeholder="Shorten a link here..."
+          onKeyDown={(e) => e.key === "Enter" && onSubmit()}
           required
         />
         {error ? <span className="error-msg">Please add a link</span> : null}
