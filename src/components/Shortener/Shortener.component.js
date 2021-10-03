@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ShortenerInput from "../ShortenerInput/ShortenerInput.component";
 import ShortenerList from "../ShortenerList/ShortenerList.component";
-import getShortenLink from "../utils/getShortenLink";
+import getShortenLink from "../../utils/getShortenLink";
 import "./Shortener.styles.scss";
 
 function Shortener() {
