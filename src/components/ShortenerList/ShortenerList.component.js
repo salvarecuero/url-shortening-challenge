@@ -13,7 +13,7 @@ function ShortenerList({ shortenedLinks = [] }) {
   };
 
   return (
-    <ul>
+    <ul id="shortener-list">
       {shortenedLinks.map((item) => {
         console.log(item);
         return (

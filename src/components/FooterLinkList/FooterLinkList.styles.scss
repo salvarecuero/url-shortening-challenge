@@ -1,0 +1,29 @@
+@use "../../styles/colors";
+
+.footer-link-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .footer-link-list-title {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .footer-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: colors.$gray;
+    list-style-type: none;
+
+    li {
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

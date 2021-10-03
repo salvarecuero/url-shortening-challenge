@@ -1,0 +1,52 @@
+@use "../../styles/colors";
+@use "../../styles/sizes";
+
+#footer-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 5% 10%;
+  gap: 25px;
+  background-color: colors.$very-dark-violet;
+
+  @media screen and (max-width: 725px) {
+    padding: 5% 5%;
+  }
+
+  #footer-logo {
+    width: 30%;
+  }
+
+  #footer-links {
+    display: flex;
+    gap: 75px;
+  }
+
+  #footer-socials {
+    display: flex;
+    margin-top: 10px;
+    gap: 20px;
+
+    .footer-social-logo {
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @media screen and (max-width: 725px) {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    #footer-links {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    #footer-socials {
+      margin-top: 0px;
+    }
+  }
+}
