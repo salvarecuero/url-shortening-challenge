@@ -1,0 +1,24 @@
+@use "../../styles/colors";
+
+#boost-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+
+  background-color: colors.$dark-violet;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../assets/images/bg-boost-desktop.svg");
+
+  #boost-title {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  #boost-button {
+    padding: 10px 30px;
+  }
+}
