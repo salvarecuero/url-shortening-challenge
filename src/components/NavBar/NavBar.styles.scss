@@ -4,7 +4,7 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: sizes.$container-padding;
+  padding: sizes.$container-desktop-padding;
 }
 
 .nav-items-container {
@@ -27,6 +27,9 @@ nav {
 }
 
 @media screen and (max-width: 725px) {
+  nav {
+    padding: sizes.$container-mobile-padding;
+  }
   .burger-button {
     display: block;
   }

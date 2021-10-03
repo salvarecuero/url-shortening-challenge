@@ -1,0 +1,14 @@
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  bottom: 61px;
+  margin-top: 20px;
+  border-radius: 5px;
+  list-style-type: none;
+
+  @media scren and (max-width: 725px) {
+    bottom: 99.5px;
+  }
+}

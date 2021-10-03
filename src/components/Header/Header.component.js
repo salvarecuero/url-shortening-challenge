@@ -16,7 +16,7 @@ function Header() {
         <Button rounded>Get Started</Button>
       </div>
       <div className="header-illustration">
-        <HeaderImage />
+        <HeaderImage width="100vw" />
       </div>
     </div>
   );

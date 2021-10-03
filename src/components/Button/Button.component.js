@@ -1,14 +1,13 @@
 import React from "react";
 import "./Button.styles.scss";
 
-function Button({ children, dark, rounded, styles, onClickHandler }) {
+function Button({ children, dark, rounded, ...otherProps }) {
   return (
     <button
       className={`button ${dark ? "dark-btn" : "light-btn"} ${
         rounded ? "rounded" : ""
       }`}
-      style={{ ...styles }}
-      onClick={onClickHandler}
+      {...otherProps}
     >
       {children}
     </button>

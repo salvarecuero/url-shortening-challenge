@@ -1,0 +1,11 @@
+@use "../../styles/colors";
+@use "../../styles/sizes";
+
+.shortener-container {
+  background-color: colors.$grayish-blue;
+  padding: sizes.$container-desktop-padding;
+
+  @media screen and (max-width: 725px) {
+    padding: sizes.$container-mobile-padding;
+  }
+}
