@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
+import { useLocalStorageState } from "../../hooks/useLocalStorageState";
 import ShortenerInput from "../ShortenerInput/ShortenerInput.component";
 import ShortenerList from "../ShortenerList/ShortenerList.component";
 import getShortenLink from "../../utils/getShortenLink";
 import "./Shortener.styles.scss";
 
 function Shortener() {
-  const [shortenedLinks, setShortenedLinks] = useState([]);
+  const [shortenedLinks, setShortenedLinks] = useLocalStorageState(
+    "shortened-links",
+    []
+  );
 
   const handleNewLink = async (newLink) => {
     const { result: shortenedLinkData } = await getShortenLink(newLink);
