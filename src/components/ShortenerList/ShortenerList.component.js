@@ -15,7 +15,6 @@ function ShortenerList({ shortenedLinks = [] }) {
   return (
     <ul id="shortener-list">
       {shortenedLinks.map((item) => {
-        console.log(item);
         return (
           <ShortenerListItem
             key={item.id}

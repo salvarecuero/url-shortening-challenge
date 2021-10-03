@@ -8,8 +8,12 @@ function ShortenerInput({ handleNewLink }) {
   const [error, setError] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
-  const onSubmit = () =>
-    isURL(inputValue) ? handleNewLink(inputValue) : setError(true);
+  const onSubmit = () => {
+    if (isURL(inputValue)) {
+      handleNewLink(inputValue);
+      setInputValue("");
+    } else setError(true);
+  };
 
   const onChange = (e) => {
     setError(false);
